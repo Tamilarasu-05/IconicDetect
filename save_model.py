@@ -30,15 +30,16 @@ emoji_dict = {
 }
 
 def predict_emoji(text):
-    # Convert text to lowercase for case-insensitive matching
+
     text = text.lower()
     
-    # Check for the keyword in the text and return corresponding emoji
+ 
     for word, emoji in emoji_dict.items():
         if word in text:
             return emoji
     return "No emoji found for the given text."
 
-# Test the function
+
 text_input = input("Enter a text to predict an emoji: ")
 print("Predicted Emoji:", predict_emoji(text_input))
+
